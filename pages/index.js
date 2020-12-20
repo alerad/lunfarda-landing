@@ -1,65 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import * as React from "react";
+import loadable from "@loadable/component";
+const Grid = loadable(() => import("@material-ui/core/Grid"))
+const Discover = loadable(() => import("../src/components/landing/Discover"))
+const StartHere = loadable(() => import("../src/components/landing/StartHere"))
+const DreamVacation = loadable(() => import("../src/components/landing/DreamVacation"))
+const TripAdvisor = loadable(() => import("../src/components/landing/TripAdvisor"))
+const Local = loadable(() => import("../src/components/landing/Local"))
+const Experiences = loadable(() => import("../src/components/landing/Experiences"))
+const Philosophy = loadable(() => import("../src/components/landing/Philosophy"))
+const Footer = loadable(() => import("../src/components/landing/Footer"))
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <React.Fragment>
+        <Grid container item xs={12}>
+          <StartHere/>
+        </Grid>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Grid container item xs={12}>
+          <Discover/>
+        </Grid>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <Grid item container xs={12} style={{marginTop: "3rem"}}>
+          <DreamVacation/>
+        </Grid>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <Grid item container xs={12}>
+          <TripAdvisor/>
+        </Grid>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <Grid item container xs={12}>
+          <Local/>
+        </Grid>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+        <Grid item container xs={12}>
+          <Experiences/>
+        </Grid>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+        <Grid item container xs={12}>
+          <Philosophy/>
+        </Grid>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+        <Grid item container xs={12}>
+          <Footer/>
+        </Grid>
+      </React.Fragment>
   )
 }
