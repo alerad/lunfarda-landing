@@ -30,7 +30,7 @@ export const Neighborhoods: React.FC<NeighborhoodsProps> = (props) => {
         <Grid item container xs={12} className={classes.root}>
             <Grid item xs={12} className={classes.title}>
                 <Typography variant={"h1"} color={"secondary"}>
-                    The Neighborhoods
+                    The Neighborhoods of Buenos Aires
                 </Typography>
             </Grid>
             <Grid item container xs={12}>

@@ -2,6 +2,7 @@
   "name": "lunfardatravel-landing",
   "version": "0.1.0",
   "private": true,
+  "main": "build/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,6 +25,8 @@
     "@types/react-dom": "^16.9.8",
     "date-fns": "^2.0.0-beta.5",
     "emailjs-com": "^2.6.4",
+    "firebase-admin": "^9.4.2",
+    "firebase-functions": "^3.13.0",
     "next": "10.0.3",
     "next-fonts": "^1.5.1",
     "react": "17.0.1",
