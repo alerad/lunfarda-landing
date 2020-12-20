@@ -5,7 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles(theme => (
     {
         root: {
-            backgroundImage: "url('https://lun-us.icons8.com/api/assets/c9b03050-75a2-46a3-a48c-34d35c3d563c/0 Argentina Land of Stories.png')",
+            backgroundImage: "url('/landing/landofstories.png')",
             height: '40vh'
         }
     }
