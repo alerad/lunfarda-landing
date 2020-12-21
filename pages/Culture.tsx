@@ -29,7 +29,7 @@ export const Culture: React.FC<CultureProps> = (props) => {
         <Grid item container xs={12} className={classes.root}>
             <Grid item xs={12} className={classes.title}>
                 <Typography variant={"h1"} color={"secondary"}>
-                    Day Trips
+                    Our Culture
                 </Typography>
             </Grid>
 

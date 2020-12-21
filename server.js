@@ -35,7 +35,7 @@ app.prepare().then(() => {
 
         hButtons.forEach(x => {
             if (pathname === "/"+x.As) {
-                app.render(req, res, x.Url, query)
+                app.render(req, res, "/"+x.Url, query)
             }
         })
 
