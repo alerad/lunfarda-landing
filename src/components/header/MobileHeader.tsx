@@ -1,10 +1,10 @@
-import React from "react"
+import * as React from "react"
 import {AppBar, IconButton, Toolbar, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import MenuIcon from '@material-ui/icons/Menu';
-import {Link} from "react-router-dom";
 import {MobileMenu} from "./mobile/MobileMenu";
 import {hButtons} from "./Header";
+import Link from "next/link";
 
 const useStyles = makeStyles(theme => (
     {
@@ -54,7 +54,7 @@ export const MobileHeader: React.FC<MobileHeaderProps> = (props) => {
                     <MenuIcon />
                 </IconButton>
                 <MobileMenu open={open} handleClose={handleClose} anchorEl={anchorEl} buttons={hButtons} handleOpen={handleMenu}/>
-                <Link to={"/"} style={{textDecoration: 'none'}}>
+                <Link href={"/"} style={{textDecoration: 'none'}}>
                     <Typography variant="h6" className={classes.title} style={{color:"white"}}>
                         LUNFARDA TRAVEL
                     </Typography>

@@ -9,7 +9,10 @@ const useStyles = makeStyles(theme => (
             boxShadow: "3px 3px 6px 0 #d9d9d9",
             border: "solid 1px #e2e2e2",
             borderTop: ".7rem solid #63A76D",
-            cursor: "pointer"
+            cursor: "pointer",
+            [theme.breakpoints.down('sm')]: {
+                marginTop: '2rem'
+            }
         },
         greenCircle: {
             minWidth: '1rem',

@@ -1,9 +1,9 @@
-import React from "react"
+import * as React from "react"
 import {Grid, ListItem, ListItemText, SwipeableDrawer} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {HeaderButtonProps} from "../HeaderButton";
-import {Link} from "react-router-dom";
 import CloseIcon from '@material-ui/icons/Close';
+import Link from "next/link";
 
 const useStyles = makeStyles(theme => (
     {
@@ -56,7 +56,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = (props) => {
                     {props.buttons.map((b, i) => {
                         return (
                             <Grid item xs={12} key={i}>
-                                <Link to={`${b.Url}`} className={classes.linkItem} onClick={props.handleClose}>
+                                <Link href={b.Url} as={b.As} className={classes.linkItem} onClick={props.handleClose}>
                                     <ListItem button key={b.Text} className={classes.listItem}>
                                         <ListItemText primary={b.Text} />
                                     </ListItem>
