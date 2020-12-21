@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+      <script async
+    src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=925&amp;locationId=18543609&amp;lang=en_US&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2"
+    data-loadtrk/>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
