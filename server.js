@@ -1,5 +1,3 @@
-import {hButtons} from "./components/header/Header";
-
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
@@ -15,20 +13,77 @@ app.prepare().then(() => {
         const parsedUrl = parse(req.url, true)
         const { pathname, query } = parsedUrl
 
-        let rendered = false;
 
         hButtons.forEach(x => {
             if (pathname === x.As) {
-                rendered = true
                 app.render(req, res, x.Url, query)
             }
         })
 
-        if (rendered)
-            handle(req, res, parsedUrl)
+        handle(req, res, parsedUrl)
 
     }).listen(3000, (err) => {
         if (err) throw err
         console.log('> Ready on http://localhost:3000')
     })
 })
+
+
+/**
+ * Urls and routing are handled in App.js
+ */
+const hButtons = [
+    {
+        Text : "Buenos Aires",
+        Url: "BuenosAires",
+        As: "buenos-aires",
+        subItems: [
+            {
+                Text: "Neighborhoods",
+                Url: "Neighborhoods",
+                As: "neighborhoods"
+            },
+            {
+                Text: "Culture",
+                Url: "Culture",
+                As: "culture"
+            },
+            {
+                Text: "Day trips",
+                Url:"DayTrips",
+                As: "day-trips"
+            }
+        ]
+
+    },
+    {
+        Text : "Kids",
+        Url: "Kids",
+        As: "kids"
+    },
+    {
+        Text : "Jewish Heritage",
+        Url: "JewishHeritage",
+        As:"jewish-heritage"
+    },
+    {
+        Text : "Argentina",
+        Url: "Argentina",
+        As:"argentina"
+    },
+    {
+        Text : "Book",
+        Url: "Book",
+        As:"book"
+    },
+    {
+        Text : "About Us",
+        Url: "AboutUs",
+        As: "about-us"
+    },
+    {
+        Text : "FAQ",
+        Url: "Faq",
+        As:"faq"
+    }
+]
