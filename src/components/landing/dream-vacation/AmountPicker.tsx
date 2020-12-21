@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {Grid, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
-// import personSvg from '../../../assets/landing/person-icon.svg'
+import personSvg from '../../../assets/landing/person-icon.svg'
 
 const useStyles = makeStyles(theme => (
     {
@@ -42,7 +42,7 @@ export const AmountPicker: React.FC<AmountPickerProps> = (props) => {
                 </Typography>
             </Grid>
             <Grid item xs={1}>
-                {/*<img src={personSvg} alt={"Tourist"}/>*/}
+                <img src={personSvg} alt={"Tourist"}/>
 
             </Grid>
             <Grid item xs={1} style={{paddingLeft: '.3rem'}}>
