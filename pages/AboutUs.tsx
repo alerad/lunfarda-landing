@@ -29,6 +29,7 @@ export const AboutUs: React.FC<AboutUsProps> = () => (
                 <Footer/>
             </Grid>
         </React.Fragment>
+    
     )
 
 export default AboutUs
