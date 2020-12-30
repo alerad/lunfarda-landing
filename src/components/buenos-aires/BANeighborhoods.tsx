@@ -26,7 +26,8 @@ const useStyles = makeStyles(theme => (
             backgroundSize: "100% 100%!important",
             backgroundRepeat: 'no-repeat',
             minHeight: '250px',
-            position:'relative'
+            position:'relative',
+            cursor: 'pointer'
         }
     }
 ));
