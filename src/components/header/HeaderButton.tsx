@@ -89,7 +89,7 @@ const GenerateDropDownButton = (props: HeaderButtonProps) => {
         <React.Fragment>
                 <Grid item container xs={12} style={{position:"relative"}}>
                     <Grid item xs={12}>
-                        <Link href={props.Url} style={{textDecoration:'none'}}>
+                        <Link href={props.Url} as={props.As} style={{textDecoration:'none'}}>
                             <div className={`${classes.mainButton}`} onMouseEnter={handleHover}>
                                 <Typography className={props.ClassName}>{props.Text}</Typography>
                             </div>

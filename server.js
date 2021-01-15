@@ -1,6 +1,7 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
+
 const GetReviews = () => {
     return fetch("https://www.tripadvisor.com/OwnerResponseApi/1.0/location/18543609/reviews?offset=0&rating=5&safetyAlerts=false&safetyRelated=false", {
         "headers": {
