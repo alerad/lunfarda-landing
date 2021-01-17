@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export const GetReviews = () => {
-    return fetch("https://lunfardatravel.com/reviews", {
+    return fetch("https://www.lunfardatravel.com/reviews", {
         "headers": {
             "accept": "*/*",
             "accept-language": "en-US,en;q=0.9,es-AR;q=0.8,es;q=0.7,cs-CZ;q=0.6,cs;q=0.5",
