@@ -45,6 +45,7 @@ const useStyles = makeStyles(theme => (
         },
         bookAppointment: {
             fontWeight: 500,
+            cursor: 'pointer',
             textDecoration: 'underline',
             textAlign: "right"
         },
@@ -140,7 +141,7 @@ const LeftPanel = () => {
                             <Typography color={"secondary"} className={classes.unsureNormalText}>
                                 Schedule a complimentary advising<br/> consultation with our experts.
                             </Typography>
-                            <Typography variant={"h5"} className={classes.bookAppointment}>
+                            <Typography variant={"h5"} className={classes.bookAppointment} onClick={()=> window.open("http://www.calendly.com/lunfardatravel", "_blank")}>
                                 <br/>
                                 Book Appointment
                             </Typography>

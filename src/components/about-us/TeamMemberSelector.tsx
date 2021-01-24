@@ -172,13 +172,29 @@ export const members : TeamMember[] = [
         credentials: ""
     },
     {
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE8ahTP7xZs-PIy4mh1azKSdAPUOkQF5CF0Q&usqp=CAU",
+        image: "https://i.imgur.com/wtzSGRI.jpg",
         description: "Maru is a tour guide and historian whose study materials were often taller than herself, which might explain why she oozes so much knowledge. As a graduate from the demanding University of Buenos Aires, she’s all about the facts and none about the speculation, making her a perfect fit for scholars trying to gain a deep understanding of the complex social and political history of Argentina.\n" +
             "Maru is as experienced as she is socially involved, working with a popular highschool for underprivileged teens and adults alike for nearly a decade.\n" +
             "Discover the Political History and the Human Rights history of Argentina with her tours.\n",
         name: "Maru",
         bio: "Historian, guide and social activist with a no-nonsense approach.",
         role: "Generalist Guide + History Specialist",
+        credentials: ""
+    },
+    {
+        image: "https://i.imgur.com/AUDrsbA.png",
+        description: "Julia is a tour guide, film student and activist. She's part of a project called Kukily Afrofeminist Collective, alongside three other women artists with different origins who - like herself - believe in changing the world through art and social action. She feels like being part of a community is essential because to her  sustainability means building a network where we can help each other to have a better life. She also love writing, learning new languages and meeting new people. Julia has led the investigation to create the first Afro-Argentine history tour.",
+        name: "Julia",
+        bio: "Afro-Argentine history expert, activist and artist.",
+        role: "Afro-argentine + Tango Specialist",
+        credentials: ""
+    },
+    {
+        image: "https://i.imgur.com/AUDrsbA.png",
+        description: "Julia is a tour guide, film student and activist. She's part of a project called Kukily Afrofeminist Collective, alongside three other women artists with different origins who - like herself - believe in changing the world through art and social action. She feels like being part of a community is essential because to her  sustainability means building a network where we can help each other to have a better life. She also love writing, learning new languages and meeting new people. Julia has led the investigation to create the first Afro-Argentine history tour.",
+        name: "Julia",
+        bio: "Afro-Argentine history expert, activist and artist.",
+        role: "Afro-argentine + Tango Specialist",
         credentials: ""
     },
     {

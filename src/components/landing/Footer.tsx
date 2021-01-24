@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
                         We'd love to chat with you | hello@lunfardatravel.com
                     </Typography>
                     <Typography variant={"body2"}>
-                        54 9 11 3374 9589 | Book a complimentary advising call with our travel experts.
+                        +5491165827559 / +5491148749617 | Book a complimentary advising call with our travel experts.
                     </Typography>
                 </Grid>
             </Grid>

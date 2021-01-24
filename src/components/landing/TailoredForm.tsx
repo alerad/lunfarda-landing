@@ -20,6 +20,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import emailjs, {init} from "emailjs-com";
 import {FormOk} from "../forms/FormOk";
 import {toast} from "react-toastify";
+import mailchimp from "@mailchimp/mailchimp_marketing";
 
 const useStyles = makeStyles(theme => (
     {
@@ -91,7 +92,12 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
     const classes = useStyles();
     init("user_cj6HL59j1sB0doOAAkpof");
 
-    const [selectedDate, setDate] = useState(new Date());
+    mailchimp.setConfig({
+        apiKey: "e6198e1f4e525d0d5a5e112c46a5dfd3-us10",
+        server: "https://us10.admin.mailchimp.com/",
+    });
+
+   const [selectedDate, setDate] = useState(new Date());
 
 
     const [state, setState] = React.useState<TailoredFormData>({
@@ -176,9 +182,35 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
         return data;
     }
 
+    const run = async () => {
+        const response = await mailchimp.lists.updateList("430597", {
+            name: "Lunfarda Travel",
+            permission_reminder: "In the past you provided http://www.lunfardatravel.com with your e-mail. Feel free to unsubscribe.",
+            email_type_option: true,
+            contact: {
+                company: "Lunfarda Travel",
+                address1: "",
+                city: "",
+                state: "",
+                zip: "",
+                country: ""
+            },
+            campaign_defaults: {
+                from_name: state.from_name,
+                from_email: state.email,
+                subject: "Lunfarda Travel",
+                language: "EN",
+            },
+        });
+        console.log(response);
+    };
+
+
     const onSubmit = () => {
         if (validate(state.email, state.from_name).length === 0) {
             setSubmitted(true)
+            // run().then(() => console.log("submitted"));
+
             emailjs.send("testemail","template_xl313hl", createEmailData()).then(x => {
                 console.log("Mail sent")
             });
@@ -263,7 +295,8 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
                     aria-describedby="simple-modal-description"
                     style={{overflow: 'scroll'}}
                 >
-                    <Grid item container xs={12} justify={"center"} alignItems={"center"}>
+                    <form>
+                        <Grid item container xs={12} justify={"center"} alignItems={"center"}>
                         <ClickAwayListener onClickAway={handleClickAway}>
                             <Grid item container xs={10} md={6} className={classes.root} spacing={4}>
                                 <Grid item xs={10}>
@@ -477,7 +510,7 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
                                 <Hidden smDown>
                                     <Grid item container md={6} justify={"center"} alignItems={"center"}>
                                         <Grid item xs style={{textAlign: 'center'}}>
-                                            {/*<img src={lunfardaLogo} alt={"Lunfarda Logo"}/>*/}
+                                            <img src={"https://i.imgur.com/Dm5ciyh.png"} alt={"Lunfarda Logo"}/>
                                         </Grid>
                                     </Grid>
                                 </Hidden>
@@ -494,6 +527,7 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
                             </Grid>
                         </ClickAwayListener>
                     </Grid>
+                    </form>
                 </Modal>
             </Grid>
         )

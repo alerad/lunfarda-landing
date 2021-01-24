@@ -117,12 +117,14 @@ export const DreamForm: React.FC<DreamFormProps> = (props) => {
         return (
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <FormControl onSubmit={onSubmitForm}>
+                    <form>
+
                     <Grid item container xs={12}>
                         <Grid item xs={12} className={classes.formSpacing}>
-                            <TextInput label={"Name"} onChange={e => setName(e.target.value)}/>
+                            <TextInput label={"Name"} onChange={e => setName(e.target.value)} autocomplete={"name"}/>
                         </Grid>
                         <Grid item xs={12} className={classes.formSpacing}>
-                            <TextInput label={"Email"} onChange={e => setEmail(e.target.value)}/>
+                            <TextInput label={"Email"} onChange={e => setEmail(e.target.value)} autocomplete={"email"}/>
                         </Grid>
                         <Grid item container xs={12} className={classes.formSpacing}>
                             <Grid item xs={5} md={6}>
@@ -147,6 +149,8 @@ export const DreamForm: React.FC<DreamFormProps> = (props) => {
                             </CtaButton>
                         </Grid>
                     </Grid>
+                    </form>
+
                 </FormControl>
 
             </MuiPickersUtilsProvider>

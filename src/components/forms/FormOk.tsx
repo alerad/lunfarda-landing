@@ -26,7 +26,7 @@ export const FormOk: React.FC<FormOkProps> = (props) => {
         <Grid item container xs={12} className={classes.root} justify={"center"}>
             <Grid item container xs={10} className={classes.container}>
                 <Grid item xs={12}>
-                    <img src={lunfardaLogo} alt={"Lunfarda Logo"}/>
+                    <img src={"https://i.imgur.com/Dm5ciyh.png"} alt={"Lunfarda Logo"}/>
                 </Grid>
                 <Grid item xs={12}>
                     <Typography variant={"h1"}>
