@@ -75,7 +75,7 @@ export const TripAdvisor : React.FC<TripAdvisorProps> = (props) => {
                     <Grid item container xs={12} justify={"space-around"} className={classes.tripCards}>
                         {reviews.filter(x => x.rating === 5).slice(0, 3).map(x => {
                             return (
-                                <Grid item xs={10} md={3}>
+                                <Grid item xs={10} md={3} key={x.text}>
                                     <TripCard
                                         title={x.abbrevTitle}
                                         text={x.text}

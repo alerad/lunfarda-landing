@@ -45,7 +45,7 @@ export const TourList : React.FC<TourListProps> = (props) => {
         <Grid item container xs={12} spacing={2}>
             {bokunResponse.map(x => {
                 return (
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4} key={x.text}>
                         <BookTour tour={x}/>
                     </Grid>
                 )

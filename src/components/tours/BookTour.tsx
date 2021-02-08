@@ -83,7 +83,7 @@ export const BookTour = (props: BookTourProps) => {
     const buttonClasses = `bokunButton ${classes.bokunBotton}`
 
     const simulateBookClick = (e: any) => {
-        bookRef?.click()
+        bookRef.click()
     }
 
     let bookRef: HTMLButtonElement | null

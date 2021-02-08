@@ -51,7 +51,7 @@ export const BANeighborhoods: React.FC<BANeighborhoodsProps> = (props) => {
 
                 <Grid item xs={10} md={6} className={classes.marginTop}>
                     <Typography variant={"subtitle1"} color={"secondary"}>
-                        Take a loot at the different neighborhoods, its
+                        Take a look at the different neighborhoods, its
                         interesting attractions and beautiful landscapes
                     </Typography>
                 </Grid>
@@ -59,7 +59,7 @@ export const BANeighborhoods: React.FC<BANeighborhoodsProps> = (props) => {
                 <Grid item container xs={12} spacing={3} className={classes.marginTop}>
                     {places.map(place => {
                         return (
-                                <Link href={"Neighborhoods"} as={"neighborhoods"} asstyle={{cursor:"pointer", textDecoration:"none"}}>
+                                <Link href={"Neighborhoods"} as={"neighborhoods"} styles={{cursor:"pointer", textDecoration:"none"}}>
                             <Grid item xs={12} md={4}>
                                     <PlaceCard name={place.name} image={place.image}/>
                             </Grid>

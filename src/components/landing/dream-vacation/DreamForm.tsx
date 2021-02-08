@@ -121,10 +121,10 @@ export const DreamForm: React.FC<DreamFormProps> = (props) => {
 
                     <Grid item container xs={12}>
                         <Grid item xs={12} className={classes.formSpacing}>
-                            <TextInput label={"Name"} onChange={e => setName(e.target.value)} autocomplete={"name"}/>
+                            <TextInput label={"Name"} onChange={e => setName(e.target.value)} autoComplete={"name"}/>
                         </Grid>
                         <Grid item xs={12} className={classes.formSpacing}>
-                            <TextInput label={"Email"} onChange={e => setEmail(e.target.value)} autocomplete={"email"}/>
+                            <TextInput label={"Email"} onChange={e => setEmail(e.target.value)} autoComplete={"email"}/>
                         </Grid>
                         <Grid item container xs={12} className={classes.formSpacing}>
                             <Grid item xs={5} md={6}>

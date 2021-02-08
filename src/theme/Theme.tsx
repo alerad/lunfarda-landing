@@ -61,10 +61,10 @@ export const theme = createMuiTheme({
                 fontSize: ".8rem"
             },
             body1: {
-                fontSize: '.75rem'
+                fontSize: '.9rem'
             },
             body2: {
-                fontSize: '.6rem'
+                fontSize: '.75rem'
             },
             fontFamily: [
                 'Montserrat',
