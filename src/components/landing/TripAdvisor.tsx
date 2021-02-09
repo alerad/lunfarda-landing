@@ -7,6 +7,7 @@ import Icon from '@material-ui/core/Icon';
 import Trip from '../../assets/icon-tripadvisor.svg'
 import {AddTripScript, GetReviews} from "../../services/TripAdvisorService";
 import {TripCard} from "./tripadvisor/TripCard";
+import emailjs, {init} from "emailjs-com";
 
 const useStyles = makeStyles(theme => (
     {
@@ -39,6 +40,7 @@ interface TripAdvisorProps {
 
 export const TripAdvisor : React.FC<TripAdvisorProps> = (props) => {
     const classes = useStyles();
+    init("user_cj6HL59j1sB0doOAAkpof");
 
     const [reviews, setReviews] = useState([])
 
@@ -46,6 +48,20 @@ export const TripAdvisor : React.FC<TripAdvisorProps> = (props) => {
         GetReviews()
             .then(x => x.json())
             .then(x => setReviews(x.reviewData))
+            .catch(x => {
+                emailjs.send("testemail","template_jtobqor",{
+                    from_name: "ERROR",
+                    email: "owo@gmail.com",
+                    tour_date: "",
+                    tourist_count: "",
+                    extra_info: "Error calling the tripadvisor service: " + x.toString(),
+                }).then(x => {
+                    console.log("Mail sent")
+                });
+                GetReviews()
+                    .then(x => x.json())
+                    .then(x => setReviews(x.reviewData))
+            })
     }, [])
 
     return (

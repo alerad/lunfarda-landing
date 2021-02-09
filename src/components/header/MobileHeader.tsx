@@ -28,13 +28,15 @@ interface MobileHeaderProps {
 export const MobileHeader: React.FC<MobileHeaderProps> = (props) => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
+    const [open, setOpen] = React.useState(Boolean(anchorEl));
 
     const handleMenu = (event: any) => {
+        setOpen(true)
         setAnchorEl(event.currentTarget);
     };
 
     const handleClose = () => {
+        setOpen(false)
         setAnchorEl(null);
     };
 

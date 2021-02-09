@@ -55,8 +55,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = (props) => {
                 <Grid item container xs={12} justify={"center"}>
                     {props.buttons.map((b, i) => {
                         return (
-                            <Grid item xs={12} key={i}>
-                                <Link href={b.Url} as={b.As} className={classes.linkItem} onClick={props.handleClose}>
+                            <Grid item xs={12} key={i} onClick={props.handleClose}>
+                                <Link href={b.Url} as={b.As} className={classes.linkItem}>
                                     <ListItem button key={b.Text} className={classes.listItem}>
                                         <ListItemText primary={b.Text} />
                                     </ListItem>
