@@ -15,6 +15,13 @@ function MyApp({ Component, pageProps }) {
 
   return (
       <ThemeProvider theme={theme}>
+          <title>Lunfarda Travel - Explore Argentina</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta
+                name="description"
+                content="We connect travelers and locals alike through socially responsible and bespoke experiences & tours."
+            />
+
         <CssBaseline/>
           <Hidden smDown>
               <Header/>
