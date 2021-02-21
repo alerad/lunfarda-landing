@@ -20,7 +20,6 @@ import CloseIcon from '@material-ui/icons/Close';
 import emailjs, {init} from "emailjs-com";
 import {FormOk} from "../forms/FormOk";
 import {toast} from "react-toastify";
-import mailchimp from "@mailchimp/mailchimp_marketing";
 
 const useStyles = makeStyles(theme => (
     {
@@ -92,10 +91,6 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
     const classes = useStyles();
     init("user_cj6HL59j1sB0doOAAkpof");
 
-    mailchimp.setConfig({
-        apiKey: "e6198e1f4e525d0d5a5e112c46a5dfd3-us10",
-        server: "https://us10.admin.mailchimp.com/",
-    });
 
    const [selectedDate, setDate] = useState(new Date());
 
@@ -182,38 +177,32 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
         return data;
     }
 
-    const run = async () => {
-        const response = await mailchimp.lists.updateList("430597", {
-            name: "Lunfarda Travel",
-            permission_reminder: "In the past you provided http://www.lunfardatravel.com with your e-mail. Feel free to unsubscribe.",
-            email_type_option: true,
-            contact: {
-                company: "Lunfarda Travel",
-                address1: "",
-                city: "",
-                state: "",
-                zip: "",
-                country: ""
-            },
-            campaign_defaults: {
-                from_name: state.from_name,
-                from_email: state.email,
-                subject: "Lunfarda Travel",
-                language: "EN",
-            },
+    async function run() {
+        const response = await mailchimp.lists.addListMember("b6f47f2641", {
+            email_address: state.email,
+            status: "subscribed",
+            merge_fields: {
+                FNAME: state.from_name,
+                LNAME: ""
+            }
         });
-        console.log(response);
-    };
+
+        console.log(
+            `Successfully added contact as an audience member. The contact's id is ${
+                response.id
+            }.`
+        );
+    }
 
 
     const onSubmit = () => {
         if (validate(state.email, state.from_name).length === 0) {
             setSubmitted(true)
-            // run().then(() => console.log("submitted"));
+            run().then(() => console.log("submitted"));
 
-            emailjs.send("testemail","template_xl313hl", createEmailData()).then(x => {
-                console.log("Mail sent")
-            });
+            // emailjs.send("testemail","template_xl313hl", createEmailData()).then(x => {
+            //     console.log("Mail sent")
+            // });
         } else {
             validate(state.email, state.from_name).forEach(x => {
                 toast.error(x, {
