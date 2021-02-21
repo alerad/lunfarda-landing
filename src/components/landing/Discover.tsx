@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useRef, useState} from "react"
 import {Typography, Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import { TourList } from "../tours/TourList";
@@ -27,7 +27,7 @@ export const Discover = () => {
     const classes = useStyles();
 
     const [filters, setFilters] = useState<string[]>(["highlights"]);
-
+    const listRef = useRef()
 
     return (
         <React.Fragment>
@@ -55,8 +55,10 @@ export const Discover = () => {
                 </Grid>
 
                 <Grid item container xs={12} style={{marginTop:"1rem"}}>
-                    <TourFilters filters={filtersList} onChange={setFilters} activeFilters={filters}/>
-                    <TourList filters={filters}/>
+                    <TourFilters filters={filtersList} onChange={setFilters} activeFilters={filters} reference={listRef}/>
+                    <span ref={listRef}>
+                        <TourList filters={filters}/>
+                    </span>
                 </Grid>
 
             </Grid>

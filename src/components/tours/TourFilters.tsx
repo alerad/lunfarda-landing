@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {MutableRefObject, useEffect, useRef, useState} from "react"
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
@@ -14,12 +14,12 @@ const useStyles = makeStyles(theme => (
 interface TourFiltersProps {
     filters: string[],
     activeFilters: string[],
-    onChange: (filters: string[]) => void
+    onChange: (filters: string[]) => void,
+    reference: MutableRefObject<any>
 }
 
 export const TourFilters: React.FC<TourFiltersProps> = (props) => {
     const classes = useStyles();
-
     const [filters, setFilters] = useState<string[]>(props.activeFilters)
 
     const onClickFilter = (filter: string) => {
@@ -33,6 +33,8 @@ export const TourFilters: React.FC<TourFiltersProps> = (props) => {
             props.onChange(newFilters)
             setFilters(newFilters)
         }
+        props.reference.current.scrollIntoView()
+
     }
 
 
