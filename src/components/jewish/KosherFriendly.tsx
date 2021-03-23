@@ -1,7 +1,8 @@
-import React from "react"
+import React, {useState} from "react"
 import {Grid, Hidden, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {OutlinedCta} from "../OutlinedCta";
+import {TailoredForm} from "../landing/TailoredForm";
 
 const useStyles = makeStyles(theme => (
     {
@@ -50,9 +51,20 @@ interface KosherFriendlyProps {
 
 export const KosherFriendly: React.FC<KosherFriendlyProps> = (props) => {
     const classes = useStyles();
+    const [open, setOpen] = useState(false)
+
+    const handleOpen = () => {
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(false)
+    }
 
     return (
         <Grid item container xs={12} className={classes.root}>
+            <TailoredForm open={open} close={handleClose} jew={true}/>
+
             <Grid item container xs={12} className={classes.content}>
                 <Grid item container xs={12} md={4} className={classes.image}>
                 </Grid>
@@ -78,7 +90,7 @@ export const KosherFriendly: React.FC<KosherFriendlyProps> = (props) => {
                     </Grid>
 
                     <Grid item xs={10}>
-                        <OutlinedCta variant={"outlined"} className={classes.cta}>
+                        <OutlinedCta variant={"outlined"} className={classes.cta} onClick={handleOpen}>
                             Tailor a trip
                         </OutlinedCta>
                     </Grid>

@@ -6,7 +6,9 @@ const useStyles = makeStyles(theme => (
     {
         root: {
             backgroundImage: "url('/landing/landofstories.png')",
-            height: '40vh'
+            height: '40vh',
+            backgroundSize: 'cover',
+            backgroundPositionY: '40%'
         }
     }
 ));

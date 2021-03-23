@@ -33,7 +33,7 @@ export const Covid: React.FC<CovidProps> = (props) => {
                 </Grid>
                 <Grid item xs={8} className={classes.subTitle}>
                     <Typography variant={"subtitle1"} style={{color:'black'}}>
-                        All tours and experiences can be cancelled with a 100% refund up to 24hs prior to start times until April 1st, 2021. Book at ease, we got you covered!
+                        All tours and experiences can be cancelled with a 100% refund up to 24hs prior to start times until November 1st, 2021. Book at ease, we got you covered!
                     </Typography>
                 </Grid>
             </Grid>

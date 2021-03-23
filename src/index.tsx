@@ -13,6 +13,8 @@ ReactDOM.render(
       <script async
               src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=f950a4c9-7805-4ef9-ac32-a3f40fc83793"
             />
+
+
     <App />
   </React.StrictMode>,
   document.getElementById('root')
@@ -22,3 +24,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+

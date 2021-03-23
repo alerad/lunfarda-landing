@@ -39,7 +39,9 @@ const useStyles = makeStyles(theme => (
 
 interface TailoredFormProps {
     open: boolean,
-    close: () => void
+    close: () => void,
+    family?: boolean,
+    jew?: boolean
 }
 
 type TripKind = {
@@ -110,7 +112,7 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
     const [tripKind, setTripKind] =  React.useState<TripKind>({
         solo: false,
         couples: false,
-        family: false,
+        family: !!props.family,
         friends: false,
         business: false
     })
@@ -124,7 +126,7 @@ export const TailoredForm: React.FC<TailoredFormProps> = (props) => {
         architecture: false,
         nature: false,
         shopping: false,
-        jewishHeritage: false,
+        jewishHeritage: !!props.jew,
         sports: false,
         other: ""
     })

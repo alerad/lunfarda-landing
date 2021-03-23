@@ -33,6 +33,7 @@ export const TourFilters: React.FC<TourFiltersProps> = (props) => {
             props.onChange(newFilters)
             setFilters(newFilters)
         }
+
         props.reference.current.scrollIntoView()
 
     }

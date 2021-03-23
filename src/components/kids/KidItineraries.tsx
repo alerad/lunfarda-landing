@@ -1,7 +1,8 @@
-import React from "react"
+import React, {useState} from "react"
 import {Grid, Hidden, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {OutlinedCta} from "../OutlinedCta";
+import {TailoredForm} from "../landing/TailoredForm";
 
 const useStyles = makeStyles(theme => (
     {
@@ -62,9 +63,19 @@ interface KidItinerariesProps {
 
 export const KidItineraries: React.FC<KidItinerariesProps> = (props) => {
     const classes = useStyles();
+    const [open, setOpen] = useState(false)
 
+    const handleOpen = () => {
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(false)
+    }
     return (
         <Grid item container xs={12} className={classes.root}>
+            <TailoredForm open={open} close={handleClose} family={true}/>
+
             <Grid item container xs={12} className={classes.content}>
                 <Hidden mdUp>
                     <Grid item container xs={12} className={classes.image}>
@@ -91,7 +102,7 @@ export const KidItineraries: React.FC<KidItinerariesProps> = (props) => {
                     </Grid>
 
                     <Grid item xs={10} className={classes.pad}>
-                        <OutlinedCta className={classes.cta}>
+                        <OutlinedCta className={classes.cta} onClick={handleOpen}>
                             Plan family trip
                         </OutlinedCta>
                     </Grid>

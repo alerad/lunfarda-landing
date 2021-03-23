@@ -32,10 +32,11 @@ export const Footer: React.FC<FooterProps> = (props) => {
             <Grid item container xs={12} className={classes.root} justify={"center"} alignItems={"center"}>
                 <Grid item xs={12}>
                     <Typography variant={"body2"}>
-                        We'd love to chat with you | hello@lunfardatravel.com
+                        We'd love to chat with you | <a href="mailto:hello@lunfardatravel.com">hello@lunfardatravel.com</a>
                     </Typography>
                     <Typography variant={"body2"}>
-                        +5491165827559 / +5491148749617 | Book a complimentary advising call with our travel experts.
+                        <a href="tel:+5491165827559">+5491165827559</a> / <a href="tel:+5491148749617">+5491148749617</a>
+                         &nbsp;| Book a complimentary advising call with our travel experts.
                     </Typography>
                 </Grid>
             </Grid>
