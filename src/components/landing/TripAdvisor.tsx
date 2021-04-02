@@ -53,12 +53,7 @@ export const TripAdvisor : React.FC<TripAdvisorProps> = (props) => {
                 setReviews(x.reviewData)
             })
             .catch(x => {
-                emailjs.send("testemail","template_dltt6k8",{
-                    error: x.toString(),
-                }).then(x => {
-                    console.log("Mail sent")
-                });
-                GetReviews()
+                 GetReviews()
                     .then(x => x.json())
                     .then(x => setReviews(x.reviewData))
             })

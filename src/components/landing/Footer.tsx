@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
                     </Typography>
                     <Typography variant={"body2"}>
                         <a href="tel:+5491165827559">+5491165827559</a> / <a href="tel:+5491148749617">+5491148749617</a>
-                         &nbsp;| Book a complimentary advising call with our travel experts.
+                        &nbsp;| <a href={"http://www.calendly.com/lunfardatravel"}>Book a complimentary advising call with our travel experts.</a>
                     </Typography>
                 </Grid>
             </Grid>
