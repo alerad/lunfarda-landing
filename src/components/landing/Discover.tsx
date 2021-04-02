@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react"
+import React, {useEffect, useRef, useState} from "react"
 import {Typography, Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import { TourList } from "../tours/TourList";
@@ -27,6 +27,15 @@ export const Discover = () => {
     const classes = useStyles();
 
     const [filters, setFilters] = useState<string[]>(["highlights"]);
+
+    // useEffect(() => {
+    //     if (filters.length === 0)
+    //         setFilters(["highlights"])
+    //
+    //     if (filters.length > 1)
+    //         setFilters(filters.filter(x => x === "highlights"))
+    // }, [filters])
+
     const listRef = useRef()
 
     return (
@@ -73,5 +82,10 @@ const filtersList = [
     "jewish heritage",
     "day trips",
     "transfer",
-    "walking tour"
+    "walking tour",
+    "kids",
+    "online",
+    "social impact",
+    "art & design"
+
 ]

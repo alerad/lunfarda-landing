@@ -59,17 +59,17 @@ export default BsAsJewishHeritage
 
 const cards = [
     {
-        image: "https://lun-us.icons8.com/api/assets/2fef6239-7c96-4d43-8467-5cec4b075eb3/jewish-libros.png",
+        image: "https://i.imgur.com/MsiWwp6.png",
         text: "Learn about the Jewish immigration, the 1919 pogrom, the capture of Eichman, the 90s terror attacks and beyond.",
         bold: false
     },
     {
-        image: "https://lun-us.icons8.com/api/assets/898970ea-8484-4280-ad30-ace857624fb8/jewish-edificio.png",
+        image: "https://i.imgur.com/xsAerYg.png",
         text: "Visit the Libertad and Paso Synagogues, AMIA, the Jewish Museum and the Once neighborhood.",
         bold: false
     },
     {
-        image: "https://lun-us.icons8.com/api/assets/97980f74-5afa-4350-b519-c5bf5502be51/jewish-cositos.png",
+        image: "https://i.imgur.com/Bxr8C5i.png",
         text: "All our tours are led by members of the local Jewish community, with security clearance to take you inside AMIA and the most important synagogues and museums.",
         bold: true
     }

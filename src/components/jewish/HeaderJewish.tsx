@@ -5,12 +5,14 @@ import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles(theme => (
     {
         root: {
-            background: "url('https://lun-us.icons8.com/api/assets/16ff6af2-492c-4b1f-a2e8-26bf572645d8/header-jewish.png')",
+            background: "url('https://i.imgur.com/RBr1bau.png')",
             [theme.breakpoints.down("sm")]: {
                 backgroundSize: "100% 100%"
             },
             [theme.breakpoints.up("md")]: {
                 backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center"
             },
             position: 'relative'
         },

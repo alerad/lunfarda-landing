@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => (
             }
         },
         image: {
-            background: "url('https://lun-us.icons8.com/api/assets/d2bc7a06-9976-41a8-8a62-370b77101fc5/Palermo.png')",
+            background: "url('https://i.imgur.com/pQJMJJ2.jpg')",
             backgroundSize: 'cover',
             minHeight: '300px',
             [theme.breakpoints.down("sm")] : {

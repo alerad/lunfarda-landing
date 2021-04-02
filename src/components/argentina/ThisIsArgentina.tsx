@@ -26,7 +26,7 @@ export const ThisIsArgentina: React.FC<ThisIsArgentinaProps> = (props) => {
     return (
         <Grid item container xs={12} className={classes.root} justify={"center"} alignItems={"center"}>
             <Grid item xs={12} md={4} style={{border:0}}>
-                <img src={"https://lun-us.icons8.com/api/assets/f3560a20-f8bf-42dd-a3a1-dc8dd218fb37/south.png"} style={{backgroundSize: 'cover', width:'100%'}} alt={"Argentina South"}/>
+                <img src={"https://i.imgur.com/e5SaS1X.png"} style={{backgroundSize: 'cover', width:'100%'}} alt={"Argentina South"}/>
             </Grid>
             <Grid item md={2}/>
             <Grid item xs={10} md={6} style={{padding:'2rem'}}>

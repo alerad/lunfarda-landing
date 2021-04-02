@@ -62,7 +62,7 @@ export default OurDestinations
 
 const cards = [
     {
-        image: "https://lun-us.icons8.com/api/assets/bb1a353e-a0e2-463c-8d55-d6eefb879b29/2%20cordoba.png",
+        image: "https://i.imgur.com/JgFlUPJ.jpg",
         title: "Córdoba",
         description: "Colonial heritage and laid back natural landscapes.",
         features: [
@@ -72,7 +72,7 @@ const cards = [
         ]
     },
     {
-        image: "https://lun-us.icons8.com/api/assets/ba061cb8-68ba-4118-90f1-8b7f79e6c32c/2 cordoba.png",
+        image: "https://i.imgur.com/rEpK0k4.jpg",
         title: "Iguazú",
         description: "Massive waterfalls and jungle adventures",
         features: [
@@ -82,7 +82,7 @@ const cards = [
         ]
     },
     {
-        image: "https://lun-us.icons8.com/api/assets/eaef6ebb-7c54-422c-8d8f-2a15b6c7e933/2 cordoba.png",
+        image: "https://i.imgur.com/TfA78lU.jpg",
         title: "Iberá Wetlands",
         description: "Argentine Safari, capybaras included.",
         features: [
@@ -91,7 +91,7 @@ const cards = [
         ]
     },
     {
-        image: "https://lun-us.icons8.com/api/assets/81003a30-5d5e-48cb-9479-46b720cb899e/2 cordoba.png",
+        image: "https://i.imgur.com/sOBdi6W.jpg",
         title: "Mendoza",
         description: "Wine, romance and adventure.",
         features: [
@@ -101,7 +101,7 @@ const cards = [
         ]
     },
     {
-        image: "https://lun-us.icons8.com/api/assets/45fba902-969e-4a80-b7a5-2b9905dd7c75/2 cordoba.png",
+        image: "https://i.imgur.com/vEHI2wo.jpg",
         title: "Northwest",
         description: "Alien landscapes and ancient cultures",
         features: [
@@ -111,7 +111,7 @@ const cards = [
         ]
     },
     {
-        image: "https://lun-us.icons8.com/api/assets/0825765a-ad9b-49e4-bc89-d48e8870e7b2/2 cordoba.png",
+        image: "https://i.imgur.com/PxQPfQ7.jpg",
         title: "Patagonia",
         description: "Whales, glaciers and hiking in unique landscapes",
         features: [
