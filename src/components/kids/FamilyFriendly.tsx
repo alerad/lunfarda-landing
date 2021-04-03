@@ -8,7 +8,7 @@ import AboutUs from "../../../pages/AboutUs";
 const useStyles = makeStyles(theme => (
     {
         root: {
-            background: "url('https://lun-us.icons8.com/api/assets/de273c7e-2204-441a-b620-84ebfad00ee2/kids%2001.png')",
+            background: "url('https://i.imgur.com/EJzDT1l.png')",
             backgroundColor: "rgba(241,202,18,0.1)",
             backgroundSize: "100% 100%"
         },

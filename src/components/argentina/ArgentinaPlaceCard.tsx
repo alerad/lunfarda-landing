@@ -1,18 +1,19 @@
 import React from "react"
 import {Grid, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
+import Link from "next/link";
 
 const useStyles = makeStyles(theme => (
     {
         root: {
-
+            minHeight: "520px"
         },
         cardImage: {
 
         },
         cardText: {
             backgroundColor: 'white',
-            marginTop: '-10px',
+            marginTop: '-20px',
             textAlign: "center"
 
         },
@@ -25,6 +26,18 @@ const useStyles = makeStyles(theme => (
             width: '80%',
             marginTop: '0.4rem',
             marginBottom: '0.4rem'
+        },
+        bokunBotton: {
+            backgroundColor: theme.palette.text.secondary,
+            height: "2.2rem",
+            textAlign: 'center',
+            color: theme.palette.neutralText.secondary,
+            fontWeight: 300,
+            fontSize: '.8rem',
+            borderRadius: '1rem',
+            border: 0,
+            width: '80%',
+            cursor: 'pointer'
         }
     }
 ));
@@ -70,6 +83,13 @@ export const ArgentinaPlaceCard: React.FC<ArgentinaPlaceCardProps> = (props) => 
                             )
                         })}
                     </Typography>
+                </Grid>
+                <Grid item xs={12} style={{paddingBottom:"1rem"}}>
+                    <Link href={"/book"}>
+                        <button className={classes.bokunBotton}>
+                            Book Now
+                        </button>
+                    </Link>
                 </Grid>
             </Grid>
         </Grid>

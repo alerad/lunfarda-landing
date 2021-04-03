@@ -101,7 +101,7 @@ const GenerateDropDownButton = (props: HeaderButtonProps) => {
                                 return (
                                     <Link href={x.Url} as={x.As} style={{textDecoration:'none'}}>
                                         <div className={`${classes.dropdownButon}`} onMouseEnter={handleHover} onClick={handleClose}>
-                                            <Typography className={x.ClassName} variant={"h5"} style={{fontSize: '.6rem', fontWeight:500}}>
+                                            <Typography className={x.ClassName} variant={"h6"} style={{fontSize: '.4rem', fontWeight:500}}>
                                                 {x.Text}
                                             </Typography>
                                         </div>

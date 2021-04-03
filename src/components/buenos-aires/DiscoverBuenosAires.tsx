@@ -5,7 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles(theme => (
     {
         root: {
-            backgroundImage: "url('https://lun-us.icons8.com/api/assets/37303601-cc80-4c9b-834f-d74d96749dac/00 Header.png')",
+            backgroundImage: "url('https://i.imgur.com/8VA4CES.jpg')",
             backgroundSize: "100% 100%",
             position:'relative'
         },

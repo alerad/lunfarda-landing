@@ -49,7 +49,7 @@ export const FirstTimeBA: React.FC<FirstTimeBAProps> = (props) => {
 
 
                 <Grid item container xs={12} className={classes.sectionMargin}>
-                    <TourList filters={["buenos aires"]}/>
+                    <TourList filters={["highlights"]}/>
                 </Grid>
             </Grid>
 

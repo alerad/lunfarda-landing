@@ -537,7 +537,7 @@ const FormSeparator = () => {
             border: 'none',
             height: '1px',
             margin: '0.7rem 0rem',
-            backgroundImage: 'linear-gradient(to right, #f1ca12 33%, rgba(255,255,255,0) 0%)',
+            backgroundImage: 'linear-gradient(to right, #FAFAFA 33%, rgba(255,255,255,0) 0%)',
             backgroundSize: '8px 1px',
             backgroundRepeat: 'repeat-x',
             backgroundPosition: 'bottom'

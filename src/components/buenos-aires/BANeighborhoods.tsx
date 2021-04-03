@@ -99,15 +99,15 @@ const PlaceCard = (place: PlaceCardProps) => {
 const places : PlaceCardProps[] = [
     {
         name: "North",
-        image: "https://lun-us.icons8.com/api/assets/90e7eb44-23bb-4762-85f5-1973c5e92914/retiro.png"
+        image: "https://i.imgur.com/c9YUSL8.jpg"
     },
     {
         name: "South",
-        image: "https://lun-us.icons8.com/api/assets/e2c94eb4-ef17-4435-bd69-cde5164c60c3/San Telmo.png"
+        image: "https://i.imgur.com/tpKipX0.jpg"
     },
     {
         name: "City Center",
-        image: "https://lun-us.icons8.com/api/assets/0bd71102-e8b1-4e92-ae09-d68039861091/plaza-de-mayo.png"
+        image: "https://i.imgur.com/GHgQaJ3.jpg"
     }
 ]
 
