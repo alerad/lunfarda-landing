@@ -59,7 +59,7 @@ export default BsAsJewishHeritage
 
 const cards = [
     {
-        image: "https://i.imgur.com/MsiWwp6.png",
+        image: "https://i.imgur.com/eWZNaNx.jpg",
         text: "Learn about the Jewish immigration, the 1919 pogrom, the capture of Eichman, the 90s terror attacks and beyond.",
         bold: false
     },
@@ -69,7 +69,7 @@ const cards = [
         bold: false
     },
     {
-        image: "https://i.imgur.com/Bxr8C5i.png",
+        image: "https://i.imgur.com/Qsftntk.jpg",
         text: "All our tours are led by members of the local Jewish community, with security clearance to take you inside AMIA and the most important synagogues and museums.",
         bold: true
     }

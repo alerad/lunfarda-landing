@@ -4,9 +4,13 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => (
     {
-        root: {},
+        root: {
+
+        },
         text: {
             marginTop: '2rem'
+        },
+        imgContainer: {
         }
     }
 ));
@@ -23,8 +27,8 @@ export const JewInfoCard: React.FC<JewInfoCardProps> = (props) => {
 
     return (
         <Grid item container xs={12} className={classes.root}>
-            <Grid item xs={12}>
-                <img style={{height: '100%', width:'100%', objectFit:'contain'}} src={props.image} alt={props.text}/>
+            <Grid item xs={12} className={classes.imgContainer}>
+                <img style={{minHeight: '100%', width:'100%', objectFit:'cover', maxHeight: "300px", minHeight: "300px"}} src={props.image} alt={props.text}/>
             </Grid>
             <Grid item xs={12} className={classes.text}>
                 <Typography variant={"subtitle1"} color={"secondary"}>
